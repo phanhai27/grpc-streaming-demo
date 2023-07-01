@@ -34,7 +34,7 @@ To generate the Go code, you'll need to install  protoc_.
  # Go server
  $ go get google.golang.org/grpc
  $ go install google.golang.org/protobuf/cmd/protoc-gen-go
- $ 	protoc --proto_path=protobuf protobuf/primefactor.proto --go_out=. --go-grpc_out=.
+ $ protoc --proto_path=protobuf protobuf/primefactor.proto --go_out=. --go-grpc_out=.
 
 The first command will generate primefactor_pb2.py and primefactor_pb2_grpc.py.
 The latter will generate primefactor.pb.go.
