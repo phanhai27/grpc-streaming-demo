@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "protobuf";
+option go_package = "./pb";
 package primefactor;
 
 // Prime factors service definition.

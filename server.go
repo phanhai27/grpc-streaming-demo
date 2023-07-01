@@ -3,14 +3,18 @@ package main
 import (
 	"flag"
 	"fmt"
-	pb "github.com/ridha/grpc-streaming-demo/protobuf"
-	grpc "google.golang.org/grpc"
 	"io"
 	"math"
 	"net"
+
+	pb "safeweb.app/pb"
+
+	grpc "google.golang.org/grpc"
 )
 
-type primeFactorsServer struct{}
+type primeFactorsServer struct {
+	pb.UnimplementedFactorsServer
+}
 
 func (*primeFactorsServer) PrimeFactors(stream pb.Factors_PrimeFactorsServer) error {
 	fmt.Println("Entering PrimeFactors")
